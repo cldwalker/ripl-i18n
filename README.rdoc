@@ -1,0 +1,19 @@
+== Description
+Ripl plugin to translate ripl to your preferred language.
+
+== Usage
+
+Add to your ~/.riplrc:
+
+    require 'ripl/i18n'
+    # code for your language
+    Ripl.config[:i18n_locale] = :es
+
+== Create another localization
+
+* Fork this project
+* Create a .yml file under lib/ripl/i18n/locales/ for your language.
+* Be sure to translate all the keys in lib/ripl/i18n/locales/en.yml.
+
+== Inspiration
+http://yugui.jp/articles/863
