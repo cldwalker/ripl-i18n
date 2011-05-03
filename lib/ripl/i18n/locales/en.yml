@@ -1,0 +1,15 @@
+# Keys and their words to translate into other languages
+--- 
+-f: Suppress loading ~/.irbrc
+-F: Suppress loading ~/.riplrc
+-d: Set $DEBUG to true (same as `ruby -d')
+-I: Add to front of $LOAD_PATH. Delimit multiple paths with ':'
+-r: Require file (same as `ruby -r')
+-v: Print version
+-h: Print help
+run_command: `%s' is not a %s command.
+start: Unused arguments
+load_rc: Error while loading %s
+parse_option: invalid option
+prompt: Error while creating prompt
+print_result: Error while printing result

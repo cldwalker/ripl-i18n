@@ -1,0 +1,14 @@
+---
+-f: Para de cargar ~/.irbrc
+-F: Para de cargar ~/.riplrc
+-d: Congigura $DEBUG a true (lo mismo que `ruby -d')
+-I: Añade al frente de $LOAD_PATH. Delimita con ':'
+-r: Require archivo (lo mismo que `ruby -r')
+-v: Imprime version
+-h: Imprime ayuda
+run_command: `%s' no es un comando de %s.
+start: argumentos no usado
+load_rc: Ocurrió un error mientras cargando %s
+parse_option: opción inválida
+prompt: Ocurrió un error mientras creando prompt
+print_result: Ocurrió un error impremiendo el resultado
