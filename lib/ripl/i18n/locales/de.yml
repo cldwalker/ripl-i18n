@@ -1,0 +1,14 @@
+--- 
+-f: Unterdrücke Laden von ~/.irbrc
+-F: Unterdrücke Laden von ~/.riplrc
+-d: Setze $DEBUG auf wahr (wie `ruby -d')
+-I: Pfad an den Anfang des $LOAD_PATH hinzufügen. Begrenze mehrfache Pfade mit ':'
+-r: Lade Datei mittels "require" (wie `ruby -r')
+-v: Gib Version aus
+-h: Gib Hilfe aus
+run_command: `%s' ist kein %s-Befehl.
+start: Unbenutzte Argumente
+load_rc: Fehler beim Laden von %s
+parse_option: Ungültige Option
+prompt: Fehler beim Erstellen des Prompts
+print_result: Fehler beim Ergebnis ausgeben
