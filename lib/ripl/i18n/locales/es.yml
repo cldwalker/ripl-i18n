@@ -1,7 +1,7 @@
 ---
 -f: Para de cargar ~/.irbrc
 -F: Para de cargar ~/.riplrc
--d: Congigura $DEBUG a true (lo mismo que `ruby -d')
+-d: Configura $DEBUG a true (lo mismo que `ruby -d')
 -I: Añade al frente de $LOAD_PATH. Delimita con ':'
 -r: Require archivo (lo mismo que `ruby -r')
 -v: Imprime version
