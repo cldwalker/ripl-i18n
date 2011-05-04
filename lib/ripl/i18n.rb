@@ -19,11 +19,16 @@ module Ripl::I18n
     end
 
     def init
-      Dir["#{File.dirname(__FILE__)}/i18n/locales/*.yml"].each do |file|
-        lang = File.basename(file)[/\w+/]
-        locales[lang.to_sym] = load_file(file) || {}
-      end
+      load Dir["#{File.dirname(__FILE__)}/i18n/locales/*.yml"]
       internationalize
+    end
+
+    def load(*files)
+      files.flatten.each do |file|
+        lang = File.basename(file)[/^[a-zA-Z]+/]
+        next if lang.nil? || lang.empty?
+        locales[lang.to_sym] = load_file(file)
+      end
     end
 
     def internationalize
