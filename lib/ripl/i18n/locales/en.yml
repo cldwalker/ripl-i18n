@@ -13,3 +13,5 @@ load_rc: Error while loading %s
 parse_option: invalid option
 prompt: Error while creating prompt
 print_result: Error while printing result
+usage: Usage
+options: Options
