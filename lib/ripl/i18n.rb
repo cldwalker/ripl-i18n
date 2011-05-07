@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'ripl'
 require 'yaml'
+require 'ripl/i18n/version'
 
 module Ripl::I18n
   class<<self
