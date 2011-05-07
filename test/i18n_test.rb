@@ -46,8 +46,8 @@ describe Ripl::I18n do
       end
 
       it "Runner::OPTIONS#values" do
-        Ripl::Runner::OPTIONS.values.sort_by {|a,b| a[1] <=> b[1] }[0][1].
-          should =~ /^Configura/
+        Ripl::Runner::OPTIONS.values.sort_by {|a| a[0].downcase }[0][1].
+           should =~ /^Configura/
       end
 
       it "Runner::MESSAGES#[]" do
