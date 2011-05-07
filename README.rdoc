@@ -19,8 +19,7 @@ If you want to load and use your own locale:
 As I would like to make ripl available in as many languages as possible,
 please do add your own! Here's all you have to do:
 
-* Fork this project. It's dead-easy to do this with the {fork and edit
-  button}[https://github.com/blog/844-forking-with-the-edit-button].
+* Fork this project.
 * Create a .yml file under lib/ripl/i18n/locales/ for your language.
   If you're not sure what locale to use for your language, {see
   some examples}[https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale].
