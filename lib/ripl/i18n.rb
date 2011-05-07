@@ -47,5 +47,13 @@ module Ripl::I18n
   self.locales = {}
 end
 
-Ripl.config[:i18n_locale] ||= :en
+if !Ripl.config[:i18n_locale]
+  if ( locale = ENV["LANG"] && ENV["LANG"][0,2] ) &&
+       File.exists?( File.dirname(__FILE__) + "/i18n/locales/#{locale}.yml" )
+    Ripl.config[:i18n_locale] = locale.to_sym
+  else
+    Ripl.config[:i18n_locale] = :en
+  end
+end
+
 Ripl::I18n.init
