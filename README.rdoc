@@ -1,18 +1,29 @@
 == Description
-Ripl plugin to translate ripl to your preferred language.
+A ripl plugin that translates ripl to your preferred language.
 
 == Usage
 
 Add to your ~/.riplrc:
 
     require 'ripl/i18n'
-    # code for your language
+    # Use your language: :es maps to es.yml
     Ripl.config[:i18n_locale] = :es
 
-== Create another localization
+If you want to load and use your own locale:
 
-* Fork this project
+    Ripl::I18n.load 'path/to/my_lang.yml'
+    Ripl.config[:i18n_locale] = :my_lang
+
+== Contribute Your Language
+
+As I would like to make ripl available in as many languages as possible,
+please do add your own! Here's all you have to do:
+
+* Fork this project. It's dead-easy to do this with the {fork and edit
+  button}[https://github.com/blog/844-forking-with-the-edit-button].
 * Create a .yml file under lib/ripl/i18n/locales/ for your language.
+  If you're not sure what locale to use for your language, {see
+  some examples}[https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale].
 * Be sure to translate all the keys in lib/ripl/i18n/locales/en.yml.
 
 == Inspiration
