@@ -1,2 +1,6 @@
+== 0.2.0
+* Auto-detect locale using $LANG
+* More translations
+
 == 0.1.0
 * Initial release!

@@ -6,7 +6,11 @@ A ripl plugin that translates ripl to your preferred language.
 Add to your ~/.riplrc:
 
     require 'ripl/i18n'
-    # Use your language: :es maps to es.yml
+
+If a locale exists for your language and is set via your shell variable $LANG,
+this plugin automatically uses it. Otherwise, explicitly set your language with:
+
+    # :es maps to es.yml
     Ripl.config[:i18n_locale] = :es
 
 If you want to load and use your own locale:
@@ -24,6 +28,9 @@ please do add your own! Here's all you have to do:
   If you're not sure what locale to use for your language, {see
   some examples}[https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale].
 * Be sure to translate all the keys in lib/ripl/i18n/locales/en.yml.
+
+== Credits
+* janlelis for auto locale + de.yml
 
 == Inspiration
 http://yugui.jp/articles/863
