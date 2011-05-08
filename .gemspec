@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary = "A ripl plugin que habla ta langue"
   s.description =  "A ripl plugin that translates ripl to your preferred language."
   s.required_rubygems_version = ">= 1.3.6"
-  s.add_dependency 'ripl', '~> 0.4.0'
+  s.add_dependency 'ripl', '~> 0.4.1'
   s.add_development_dependency 'bacon', '>= 1.1.0'
   s.add_development_dependency 'bacon-bits'
   s.rubyforge_project = 'tagaholic'
