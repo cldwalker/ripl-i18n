@@ -33,7 +33,7 @@ describe Ripl::I18n do
       end
 
       it "with the correct number of translations" do
-        Ripl::I18n.locales.values.each {|e| e.size.should == 13 }
+        Ripl::I18n.locales.values.each {|e| e.size.should == 17 }
       end
     end
 
@@ -59,42 +59,61 @@ describe Ripl::I18n do
       end
       after_all { Ripl.config[:i18n_locale] = :en }
     end
+  end
 
-    describe ".translate" do
-      before_all { Ripl::I18n.init }
-      it "returns translation missing message for missing translation" do
-        Ripl::I18n.translate('blah').should == "Translation missing: en.blah"
-      end
-
-      it "handles locales that haven't been defined yet" do
-        Ripl.config[:i18n_locale] = :zzz
-        Ripl::I18n.translate('-f').should =~ /^Translation missing/
-        Ripl.config[:i18n_locale] = :en
-      end
+  describe ".translate" do
+    before_all { Ripl::I18n.init }
+    it "returns translation missing message for missing translation" do
+      Ripl::I18n.translate('blah').should == "Translation missing: en.blah"
     end
 
-    describe ".load" do
-      def fixture(name)
-        File.dirname(__FILE__) +"/fixtures/#{name}.yml"
-      end
+    it "handles locales that haven't been defined yet" do
+      Ripl.config[:i18n_locale] = :zzz
+      Ripl::I18n.translate('-f').should =~ /^Translation missing/
+      Ripl.config[:i18n_locale] = :en
+    end
+  end
 
-      before { Ripl::I18n.locales = {} }
+  describe ".load" do
+    def fixture(name)
+      File.dirname(__FILE__) +"/fixtures/#{name}.yml"
+    end
 
-      it "prints warning for locale file with invalid syntax" do
-        capture_stderr {
-          Ripl::I18n.load(fixture('invalid_syntax'))
-        }.should =~ /^Error while loading/
-      end
+    before { Ripl::I18n.locales = {} }
 
-      it "sets locale using basename of locale file" do
-        Ripl::I18n.load fixture('rb')
-        Ripl::I18n.locales[:rb].should == {'-f' => 'woah dudez' }
-      end
+    it "prints warning for locale file with invalid syntax" do
+      capture_stderr {
+        Ripl::I18n.load(fixture('invalid_syntax'))
+      }.should =~ /^Error while loading/
+    end
 
-      it "skips locale if invalid basename" do
-        Ripl::I18n.load fixture('')
-        Ripl::I18n.locales.should.be.empty
-      end
+    it "sets locale using basename of locale file" do
+      Ripl::I18n.load fixture('rb')
+      Ripl::I18n.locales[:rb].should == {'-f' => 'woah dudez' }
+    end
+
+    it "skips locale if invalid basename" do
+      Ripl::I18n.load fixture('')
+      Ripl::I18n.locales.should.be.empty
+    end
+  end
+
+  describe '.default_locale' do
+    before { ENV['LANG'] = nil }
+
+    it "returns :en if no $LANG" do
+      ENV['LANG'] = nil
+      Ripl::I18n.default_locale.should == :en
+    end
+
+    it "returns :en if $LANG doesn't have an existing yml file" do
+      ENV['LANG'] = 'zzz'
+      Ripl::I18n.default_locale.should == :en
+    end
+
+    it "returns auto-detected locale if $LANG does have an existing yml file" do
+      ENV['LANG'] = 'es-PE'
+      Ripl::I18n.default_locale.should == :es
     end
   end
 end

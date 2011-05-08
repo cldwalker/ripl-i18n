@@ -32,6 +32,12 @@ module Ripl::I18n
       end
     end
 
+    def default_locale
+      ( lang = ENV["LANG"] && ENV["LANG"][0,2] ) &&
+        File.exists?( File.dirname(__FILE__) + "/i18n/locales/#{lang}.yml" ) ?
+        lang.to_sym : :en
+    end
+
     def internationalize
       Ripl::Runner::OPTIONS.each { |opt, val| locales[:en][opt] = val[1] }
       Ripl::Runner::OPTIONS.instance_eval %[
@@ -47,13 +53,5 @@ module Ripl::I18n
   self.locales = {}
 end
 
-if !Ripl.config[:i18n_locale]
-  if ( locale = ENV["LANG"] && ENV["LANG"][0,2] ) &&
-       File.exists?( File.dirname(__FILE__) + "/i18n/locales/#{locale}.yml" )
-    Ripl.config[:i18n_locale] = locale.to_sym
-  else
-    Ripl.config[:i18n_locale] = :en
-  end
-end
-
+Ripl.config[:i18n_locale] ||= Ripl::I18n.default_locale
 Ripl::I18n.init
