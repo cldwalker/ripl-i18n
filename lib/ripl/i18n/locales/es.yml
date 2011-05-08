@@ -13,6 +13,6 @@ parse_option: opción inválida
 prompt: Ocurrió un error mientras creando prompt
 print_result: Ocurrió un error impremiendo el resultado
 usage: Uso
-options: Opciónes
+options: Opciones
 args: ARGUMENTOS
 command: COMANDO
