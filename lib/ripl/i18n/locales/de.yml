@@ -14,3 +14,5 @@ prompt: Fehler beim Erstellen des Prompts
 print_result: Fehler beim Ergebnis ausgeben
 usage: Benutzung
 options: Optionen
+args: ARGUMENTE
+command: BEFEHL

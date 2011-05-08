@@ -15,3 +15,5 @@ prompt: Error while creating prompt
 print_result: Error while printing result
 usage: Usage
 options: Options
+args: ARGS
+command: COMMAND
