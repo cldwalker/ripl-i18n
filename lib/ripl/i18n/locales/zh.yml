@@ -1,0 +1,18 @@
+---
+-f: 不要讀取 ~/.irbrc
+-F: 不要讀取 ~/.riplrc
+-d: 將 $DEBUG 設為 true (等同於 `ruby -d')
+-I: 加至 $LOAD_PATH 前面。一個以上的路徑用 ':' 隔開
+-r: 載入檔案 (等同於 `ruby -r')
+-v: 顯示版本
+-h: 顯示使用說明
+run_command: `%s' 不是一個 %s 命令。
+start: 未使用的引數
+load_rc: 讀取 %s 時發生錯誤
+parse_option: 不正確的選項
+prompt: 產生提示訊息時發生錯誤
+print_result: 顯示結果時發生錯誤
+usage: 用法
+options: 選項
+args: 引數
+command: 命令
