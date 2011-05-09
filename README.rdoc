@@ -18,10 +18,25 @@ If you want to load and use your own locale:
     Ripl::I18n.load 'path/to/my_lang.yml'
     Ripl.config[:i18n_locale] = :my_lang
 
+Once you've configured a locale, all messages, errors and even help will print in
+that locale's language. For example, ripl's help in german:
+
+    $ LANG=de ripl -h
+    Benutzung: ripl [BEFEHL] [ARGUMENTE] [OPTIONEN]
+
+    Optionen:
+      -f                  Unterdrücke Laden von ~/.irbrc
+      -F                  Unterdrücke Laden von ~/.riplrc
+      -d, --debug         Setze $DEBUG auf wahr (wie `ruby -d')
+      -I PATH             Pfad an den Anfang des $LOAD_PATH hinzufügen. Begrenze mehrfache Pfade mit ':'
+      -r, --require FILE  Lade Datei mittels "require" (wie `ruby -r')
+      -v, --version       Gib Version aus
+      -h, --help          Gib Hilfe aus
+
 == Contribute Your Language
 
 As I would like to make ripl available in as many languages as possible,
-please do add your own! Here's all you have to do:
+please add your own! Here's all you have to do:
 
 * Fork this project.
 * Create a .yml file under lib/ripl/i18n/locales/ for your language.
@@ -30,7 +45,8 @@ please do add your own! Here's all you have to do:
 * Be sure to translate all the keys in lib/ripl/i18n/locales/en.yml.
 
 == Credits
-* janlelis for auto locale + de.yml
+* janlelis for auto locale + german translation
+* godfat for chinese translation
 
 == Inspiration
 http://yugui.jp/articles/863

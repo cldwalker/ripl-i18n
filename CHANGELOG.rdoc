@@ -1,3 +1,6 @@
+== 0.2.1
+* Add traditional chinese
+
 == 0.2.0
 * Auto-detect locale using $LANG
 * More translations
