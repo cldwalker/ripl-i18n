@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Gabriel Horner"]
   s.email       = "gabriel.horner@gmail.com"
   s.homepage    = "http://github.com/cldwalker/ripl-i18n"
-  s.summary = "A ripl plugin que habla ta langue"
-  s.description =  "A ripl plugin that translates ripl to your preferred language."
+  s.summary = "A ripl plugin que habla ta langue."
+  s.description =  "A ripl plugin that translates ripl to your preferred language. Current supported languages: spanish, chinese, german, portuguese."
   s.required_rubygems_version = ">= 1.3.6"
   s.add_dependency 'ripl', '~> 0.4.1'
   s.add_development_dependency 'bacon', '>= 1.1.0'

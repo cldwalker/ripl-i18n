@@ -1,5 +1,6 @@
 == Description
-A ripl plugin that translates ripl to your preferred language.
+A ripl plugin that translates ripl to your preferred language. Current supported languages:
+spanish, chinese, german, portuguese.
 
 == Usage
 
