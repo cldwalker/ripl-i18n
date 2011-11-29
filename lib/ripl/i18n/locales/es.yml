@@ -6,7 +6,7 @@
 -r: Require archivo (lo mismo que `ruby -r')
 -v: Imprime version
 -h: Imprime ayuda
-run_command: `%s' no es un comando de %s.
+run_command: ! '`%s'' no es un comando de %s.'
 start: argumentos no usado
 load_rc: Ocurrió un error mientras cargando %s
 parse_option: opción inválida

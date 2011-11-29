@@ -1,4 +1,4 @@
---- 
+---
 -f: Ignora ~/.irbrc
 -F: Ignora ~/.riplrc
 -d: Configura $DEBUG=true (mesmo que `ruby -d')
@@ -6,7 +6,7 @@
 -r: Require arquivo (mesmo que `ruby -r')
 -v: Mostra a versão
 -h: Mostra ajuda
-run_command: `%s' não e um comando de %s.
+run_command: ! '`%s'' não e um comando de %s.'
 start: Argumentos não usado
 load_rc: Erro ao carregar %s
 parse_option: opção inválida

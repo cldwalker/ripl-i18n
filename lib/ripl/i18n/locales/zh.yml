@@ -6,7 +6,7 @@
 -r: 載入檔案 (等同於 `ruby -r')
 -v: 顯示版本
 -h: 顯示使用說明
-run_command: `%s' 不是一個 %s 命令。
+run_command: ! '`%s'' 不是一個 %s 命令。'
 start: 未使用的引數
 load_rc: 讀取 %s 時發生錯誤
 parse_option: 不正確的選項

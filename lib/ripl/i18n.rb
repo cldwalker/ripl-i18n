@@ -15,7 +15,7 @@ module Ripl::I18n
 
     def load_file(file)
       YAML.load_file(file)
-    rescue
+    rescue StandardError, SyntaxError
       warn "Error while loading locale from #{file}:\n#{$!}"
     end
 

@@ -1,4 +1,4 @@
---- 
+---
 -f: Unterdrücke Laden von ~/.irbrc
 -F: Unterdrücke Laden von ~/.riplrc
 -d: Setze $DEBUG auf wahr (wie `ruby -d')
@@ -6,7 +6,7 @@
 -r: Lade Datei mittels "require" (wie `ruby -r')
 -v: Gib Version aus
 -h: Gib Hilfe aus
-run_command: `%s' ist kein %s-Befehl.
+run_command: ! '`%s'' ist kein %s-Befehl.'
 start: Unbenutzte Argumente
 load_rc: Fehler beim Laden von %s
 parse_option: Ungültige Option
