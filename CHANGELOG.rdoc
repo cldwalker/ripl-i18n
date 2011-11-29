@@ -1,3 +1,6 @@
+== 0.3.0
+* Update to work with 1.9.3
+
 == 0.2.3
 * Update gemspec
 
