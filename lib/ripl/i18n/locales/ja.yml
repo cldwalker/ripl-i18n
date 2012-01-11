@@ -1,0 +1,18 @@
+---
+-f: ~/.irbrc のロードをしない
+-F: ~/.riplrc のロードをしない
+-d: $DEBUG を true に設定(`ruby -d' と同じ)
+-I: $LOAD_PATH の最初にパスを追加。パスの区切りは ':'
+-r: Require ファイルの指定 (`ruby -r' と同じ)
+-v: バージョンを表示
+-h: ヘルプを表示
+run_command: ! '`%s'' は %s コマンドではありません。'
+start: 未使用の引数です。
+load_rc: %s をロード中にエラーが発生しました。
+parse_option: 不正なオプションです。
+prompt: プロンプトを作成中にエラーが発生しました。
+print_result: 結果をプリント中にエラーが発生しました。
+usage: 使用法
+options: オプション
+args: 引数
+command: コマンド
