@@ -1,6 +1,6 @@
 == Description
 A ripl plugin that translates ripl to your preferred language. Current supported languages:
-spanish, chinese, german, portuguese.
+spanish, chinese, german, portuguese, japanese.
 
 == Usage
 
@@ -48,6 +48,7 @@ please add your own! Here's all you have to do:
 == Credits
 * janlelis for auto locale + german translation
 * godfat for chinese translation
+* mephistobooks for japanese translation
 
 == Inspiration
 http://yugui.jp/articles/863
